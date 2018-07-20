@@ -1,0 +1,303 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      9591,        253]*)
+(*NotebookOutlinePosition[     10237,        275]*)
+(*  CellTagsIndexPosition[     10193,        271]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[{
+    StyleBox[\(p\  - \ denotes\ \ Pr\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(d\  - \ denotes\ Da\^\(-1\)\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(t\  - \ denotes\ Ta\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(f - \ denotes\ F\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(r1 - Rayleigh\ number\ for\ oscillatory\ convection\),
+      FontSize->16], "\[IndentingNewLine]", 
+    RowBox[{
+      StyleBox[\(r2 - Rayleigh\ number\ for\ stationary\ convection\),
+        FontSize->16], 
+      StyleBox[" ",
+        FontSize->16]}], "\[IndentingNewLine]", }], "Input"],
+
+Cell[BoxData[
+    RowBox[{
+      StyleBox[\(Critical\ Rayleigh\ number\),
+        FontSize->24,
+        Background->RGBColor[0, 1, 0]], 
+      StyleBox[" ",
+        FontSize->24,
+        Background->RGBColor[0, 1, 0]], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    StyleBox[\(Clear[\[CapitalGamma], p, d, t, tb, c1, c2, z, r1, r2, \[Chi], 
+        f, a, x1, x2, y1, y2, y3, y4, z1, z2, z3]\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(f = 0.7; c1 = 3.84285; c2 = 0.80092; \[CapitalGamma]\  = 0.5; 
+      p = 10; \[Chi] = 0.9; d = 0.7; t = 50;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(tb = 
+          Log[c1\/\(2*f\)] + 
+            Log[1 - \((\(1 - c2*Exp[\(-\@c1\)*z]\)\/\(1 + c2*Exp[\(-\@c1\)*z]\
+\))\)\^2];\),
+      FontSize->16], "\[IndentingNewLine]", 
+    RowBox[{
+      StyleBox[\(w1 = Sin[\[Pi]*z]\),
+        FontSize->16], 
+      StyleBox[";",
+        FontSize->16], 
+      StyleBox[\(t1 = Sin[\[Pi]*z]\),
+        FontSize->16], 
+      StyleBox[";",
+        FontSize->16], 
+      RowBox[{
+        StyleBox["g1",
+          FontSize->16], 
+        StyleBox["=",
+          FontSize->16], 
+        RowBox[{
+          StyleBox["Cos",
+            FontSize->16], "[", \(\[Pi]*z\), "]"}]}], 
+      ";"}], "\[IndentingNewLine]", 
+    StyleBox[\(x1 = \[Integral]\_0\%1\( D[
+                      w1, {z, 1}]\^2\) \[DifferentialD]z + 
+            a\^2*\(\[Integral]\_0\%1\( w1\^2\) \[DifferentialD]z\);\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y1 = \[Integral]\_0\%1 w1*t1 \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(x2 = \[Integral]\_0\%1 w1*D[tb, {z, 1}]*
+              t1 \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y2 = \[Integral]\_0\%1\( t1\^2\) \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y3 = \[Integral]\_0\%1\( D[
+                      t1, {z, 1}]\^2\) \[DifferentialD]z + 
+            a\^2*\(\[Integral]\_0\%1\( t1\^2\) \[DifferentialD]z\);\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y4 = \[Integral]\_0\%1 Exp[tb]*\(t1\^2\) \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(z1 = \[Integral]\_0\%1 w1*D[g1, {z, 1}] \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[
+      RowBox[{
+        RowBox[{
+          StyleBox["z2",
+            FontSize->16], 
+          StyleBox["=",
+            
+            FontSize->16], \(\[Integral]\_0\%1 g1*
+              D[w1, {z, 1}] \[DifferentialD]z\)}], ";"}],
+      FontSize->16], "\[IndentingNewLine]", 
+    RowBox[{
+      StyleBox[\(z3 = \[Integral]\_0\%1\( g1\^2\) \[DifferentialD]z;\),
+        FontSize->16], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    StyleBox[\(r1 = \((2\ d\ \((p\^2\ y2\^2\ \((\(-t\)\ z1\ z2 + 
+                          d\^2\ x1\ z3)\) - 
+                    2\ d\ p\ x1\ y2\ \((y3 - f\ y4)\)\ z3\ \((\(-1\) + 
+                          d\ \[CapitalGamma])\)\ \[Chi] + 
+                    x1\ \((y3 - f\ y4)\)\^2\ z3\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\^2\ \[Chi]\^2)\))\)/\((a\^2\ x2\ y1\ z3\ \((\(-1\) + 
+                    d\ \[CapitalGamma])\)\ \[Chi]\ \((d\ p\ y2 - \((y3 - 
+                          f\ y4)\)\ \((\(-1\) + 
+                          d\ \[CapitalGamma])\)\ \[Chi])\))\);\),
+      FontSize->16], "\[IndentingNewLine]", 
+    RowBox[{
+      StyleBox[\(r2 = \(-\(\(\((y3 - f\ y4)\)\ \((\(-t\)\ z1\ z2 + 
+                        d\^2\ x1\ z3)\)\)\/\(a\^2\ d\ x2\ y1\ z3\)\)\);\),
+        FontSize->16], 
+      StyleBox[" ",
+        FontSize->16]}], "\[IndentingNewLine]", 
+    StyleBox[\(FindMinimum[r1, {a, 1, 10}]\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(FindMinimum[r2, {a, 1, 10}]\),
+      FontSize->16]}], "Input"],
+
+Cell[BoxData[
+    \({167.6454670565895`, {a \[Rule] 7.630383066117638`}}\)], "Output"],
+
+Cell[BoxData[
+    \({822.2452503559365`, {a \[Rule] 9.645358903300933`}}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[
+    RowBox[{"\[IndentingNewLine]", 
+      StyleBox[\(\(Critical\)\(\ \)\(frequency\)\(\ \)\),
+        FontSize->24,
+        FontColor->RGBColor[1, 0, 0]]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    StyleBox[\(Clear[\[CapitalGamma], p, d, t, tb, c1, c2, z, r1, r2, \[Chi], 
+        f, a, x1, x2, y1, y2, y3, y4, z1, z2, z3]\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(f = 0.7; c1 = 3.84285; c2 = 0.80092; \[CapitalGamma]\  = 0.5; 
+      p = 10; \[Chi] = 0.9; d = 0.7; t = 50; a = 7.630383066117638`;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(tb = 
+          Log[c1\/\(2*f\)] + 
+            Log[1 - \((\(1 - c2*Exp[\(-\@c1\)*z]\)\/\(1 + c2*Exp[\(-\@c1\)*z]\
+\))\)\^2];\),
+      FontSize->16], "\[IndentingNewLine]", 
+    RowBox[{
+      StyleBox[\(w1 = Sin[\[Pi]*z]\),
+        FontSize->16], 
+      StyleBox[";",
+        FontSize->16], 
+      StyleBox[\(t1 = Sin[\[Pi]*z]\),
+        FontSize->16], 
+      StyleBox[";",
+        FontSize->16], 
+      RowBox[{
+        StyleBox["g1",
+          FontSize->16], 
+        StyleBox["=",
+          FontSize->16], 
+        RowBox[{
+          StyleBox["Cos",
+            FontSize->16], "[", \(\[Pi]*z\), "]"}]}], 
+      ";"}], "\[IndentingNewLine]", 
+    StyleBox[\(x1 = \[Integral]\_0\%1\( D[
+                      w1, {z, 1}]\^2\) \[DifferentialD]z + 
+            a\^2*\(\[Integral]\_0\%1\( w1\^2\) \[DifferentialD]z\);\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y2 = \[Integral]\_0\%1\( t1\^2\) \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y3 = \[Integral]\_0\%1\( D[
+                      t1, {z, 1}]\^2\) \[DifferentialD]z + 
+            a\^2*\(\[Integral]\_0\%1\( t1\^2\) \[DifferentialD]z\);\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(y4 = \[Integral]\_0\%1 Exp[tb]*\(t1\^2\) \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(z1 = \[Integral]\_0\%1 w1*D[g1, {z, 1}] \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[
+      RowBox[{
+        RowBox[{
+          StyleBox["z2",
+            FontSize->16], 
+          StyleBox["=",
+            
+            FontSize->16], \(\[Integral]\_0\%1 g1*
+              D[w1, {z, 1}] \[DifferentialD]z\)}], ";"}],
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(z3 = \[Integral]\_0\%1\( g1\^2\) \[DifferentialD]z;\),
+      FontSize->16], "\[IndentingNewLine]", 
+    StyleBox[\(w = \((p\^2\ \((d\ p\ y2\ \((t\ z1\ z2 - 
+                        d\^2\ x1\ z3)\) + \((y3 - f\ y4)\)\ \((t\ z1\ z2 + 
+                        d\^2\ x1\ z3)\)\ \((\(-1\) + 
+                        d\ \[CapitalGamma])\)\ \[Chi])\))\)/\((x1\ z3\ \
+\((\(-1\) + d\ \[CapitalGamma])\)\^2\ \((d\ p\ y2 - \((y3 - 
+                        f\ y4)\)\ \((\(-1\) + 
+                        d\ \[CapitalGamma])\)\ \[Chi])\))\)\),
+      FontSize->16]}], "Input"],
+
+Cell[BoxData[
+    \(\(\(1077.7314329756373`\)\(\[InvisibleSpace]\)\) + 
+      4.412685193638584`*^-17\ \[ImaginaryI]\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[""], "Input"]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1366}, {0, 671}},
+WindowSize->{607, 633},
+WindowMargins->{{Automatic, 18}, {Automatic, -10}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 657, 15, 151, "Input"],
+Cell[2414, 68, 253, 7, 55, "Input"],
+
+Cell[CellGroupData[{
+Cell[2692, 79, 3552, 81, 833, "Input"],
+Cell[6247, 162, 86, 1, 29, "Output"],
+Cell[6336, 165, 86, 1, 29, "Output"]
+}, Open  ]],
+Cell[6437, 169, 26, 0, 30, "Input"],
+Cell[6466, 171, 180, 4, 55, "Input"],
+
+Cell[CellGroupData[{
+Cell[6671, 179, 2713, 63, 594, "Input"],
+Cell[9387, 244, 130, 2, 29, "Output"]
+}, Open  ]],
+Cell[9532, 249, 26, 0, 30, "Input"],
+Cell[9561, 251, 26, 0, 30, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

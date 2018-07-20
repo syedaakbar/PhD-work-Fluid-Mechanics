@@ -1,0 +1,147 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4560,        107]*)
+(*NotebookOutlinePosition[      5204,        129]*)
+(*  CellTagsIndexPosition[      5160,        125]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(\(\(\n\)\(Clear[c, w, f, g, p, v, x1, y1, x2, y2, y3, 
+      y4]\[IndentingNewLine]
+    \(w = \((c*
+                p*\((f*y4 - y3)\)*\((g*p - v*p - 1)\) + \((y2*
+                  p\^2)\))\)/\((g*\((c*g*p*\((f*y4 - y3)\) + \((p*y2)\) - 
+                  c*y2*\((1 + v*p)\))\))\);\)\[IndentingNewLine]
+    \(r = 
+        x1*\((\((1 - \(w*g\)\/p)\)*\((f*y4 - y3)\) + \((1\/p + 
+                      v)\)*\(w*y2\)\/c + 
+                w*g*\((1\/p + v)\)*\ \((f*y4 - 
+                      y3)\) - \(w*y2*g\)\/c*\((1 - \(w*g\)\/p)\)\ )\)/\((a\^2*
+                x2*y1*\((1 + w*g\^2)\))\);\)\[IndentingNewLine]
+    FullSimplify[w]\[IndentingNewLine]
+    FullSimplify[r]\[IndentingNewLine]
+    Simplify[r]\)\)\)], "Input",
+  FontSize->18],
+
+Cell[BoxData[
+    \(\(p\ \((p\ y2 + c\ \((\(-1\) + g\ p - p\ v)\)\ \((\(-y3\) + f\ y4)\))\)\
+\)\/\(g\ \((p\ y2 - c\ \((y2 + p\ v\ y2 + g\ p\ \((y3 - f\ y4)\))\))\)\)\)], \
+"Output"],
+
+Cell[BoxData[
+    \(\((\((1 + p\ v)\)\ x1\ \((p\^2\ y2\^3 + 
+              c\^3\ g\ \((y3 - f\ y4)\)\ \((y2 + p\ v\ y2 + 
+                    g\ p\ \((y3 - f\ y4)\))\)\ \((\(-y2\) - 
+                    p\ \((g - v)\)\ \((y3 - f\ y4)\))\) + 
+              c\^2\ y2\ \((y3 - 
+                    f\ y4)\)\ \((\(-\((g\^2\ p\^2 + \((1 + p\ v)\)\^2 - 
+                            g\ p\ \((4 + 3\ p\ v)\))\)\)\ y2 + 
+                    g\ p\^2\ \((2\ g - v)\)\ \((y3 - f\ y4)\))\) + 
+              c\ p\ y2\^2\ \((\((\(-1\) + g\ p - p\ v)\)\ y2 - \((\(-1\) + 
+                          2\ g\ p - p\ v)\)\ \((y3 - 
+                          f\ y4)\))\))\))\)/\((a\^2\ c\ g\ x2\ y1\ \((p\ y2 - \
+c\ \((y2 + p\ v\ y2 + g\ p\ \((y3 - f\ y4)\))\))\)\^2\ \((1 + \(g\ p\ \((p\ \
+y2 + c\ \((\(-1\) + g\ p - p\ v)\)\ \((\(-y3\) + f\ y4)\))\)\)\/\(p\ y2 - c\ \
+\((y2 + p\ v\ y2 + g\ p\ \((y3 - f\ y4)\))\)\))\))\)\)], "Output"],
+
+Cell[BoxData[
+    \(\(x1\ \((\(p\ \((1\/p + v)\)\ y2\ \((p\ y2 + c\ \((\(-1\) + g\ p - p\ \
+v)\)\ \((\(-y3\) + f\ y4)\))\)\)\/\(c\ g\ \((p\ y2 - c\ \((y2 + p\ v\ y2 + g\ \
+p\ \((y3 - f\ y4)\))\))\)\) - \(c\ \((1 + p\ v)\)\ \((y3 - f\ y4)\)\ \((y2 + \
+y3 - f\ y4)\)\)\/\(\(-p\)\ y2 + c\ \((y2 + p\ v\ y2 + g\ p\ \((y3 - f\ y4)\))\
+\)\) + \(p\ \((1 + p\ v)\)\ y2\ \((y2 + y3 - f\ y4)\)\ \((c\ \((y3 - f\ y4)\) \
++ p\ \((y2 - c\ \((g - v)\)\ \((y3 - f\ y4)\))\))\)\)\/\((p\ y2 - c\ \((y2 + \
+p\ v\ y2 + g\ p\ \((y3 - f\ y4)\))\))\)\^2 + \(\((1 + p\ v)\)\ \((y3 - f\ y4)\
+\)\ \((c\ \((y3 - f\ y4)\) + p\ \((y2 - c\ \((g - v)\)\ \((y3 - f\ \
+y4)\))\))\)\)\/\(\(-p\)\ y2 + c\ \((y2 + p\ v\ y2 + g\ p\ \((y3 - f\ y4)\))\)\
+\))\)\)\/\(a\^2\ x2\ y1\ \((1 + \(g\ p\ \((p\ y2 + c\ \((\(-1\) + g\ p - p\ \
+v)\)\ \((\(-y3\) + f\ y4)\))\)\)\/\(p\ y2 - c\ \((y2 + p\ v\ y2 + g\ p\ \((y3 \
+- f\ y4)\))\)\))\)\)\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1366}, {0, 671}},
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 757, 16, 247, "Input"],
+Cell[2536, 71, 181, 3, 44, "Output"],
+Cell[2720, 76, 913, 14, 95, "Output"],
+Cell[3636, 92, 908, 12, 82, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

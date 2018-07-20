@@ -1,0 +1,305 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      9707,        238]*)
+(*NotebookOutlinePosition[     10351,        260]*)
+(*  CellTagsIndexPosition[     10307,        256]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\[IndentingNewLine]\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(p\  - \ denotes\ \ Pr\[IndentingNewLine]
+    d\  - \ denotes\ Da\^\(-1\)\[IndentingNewLine]
+    t\  - \ denotes\ \@Ta\)\)\)], "Input",
+  FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{\(Clear[\[Sigma], \[CapitalGamma], p, d, r, \[Chi], f, t, u, a, 
+      x1, x2, y1, y2, y3, y4, z1, z2, z3]\), "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{"s", "=", 
+        RowBox[{"Det", "[", 
+          RowBox[{"(", GridBox[{
+                {\(x1*\((\[Sigma]\/p + 
+                        d - \(\[Sigma]*\[CapitalGamma]*d\)\/p)\)\), \(\(-a\^2\
+\)*r*y1\), \(\(-t\)*z1\)},
+                {"x2", \(\(\[Sigma]*y2\)\/\[Chi] + y3 - f*y4\), "0"},
+                {\(t*z2\), 
+                  "0", \(\(-z3\)*\((\[Sigma]\/p + 
+                        d - \(\[Sigma]*\[CapitalGamma]*d\)\/p)\)\)}
+                }], ")"}], "]"}]}], 
+      ";"}], "\[IndentingNewLine]", \(u = 
+        Solve[s \[Equal] 0, r];\), "\[IndentingNewLine]", \(FullSimplify[
+      u]\)}], "Input",
+  FontSize->18],
+
+Cell[BoxData[
+    \({{r \[Rule] \(-\(\(p\ \((\(-t\^2\)\ z1\ z2 + \(x1\ z3\ \((\[Sigma] + d\ \
+\((p - \[CapitalGamma]\ \[Sigma])\))\)\^2\)\/p\^2)\)\ \((y2\ \[Sigma] + \((y3 \
+- f\ y4)\)\ \[Chi])\)\)\/\(a\^2\ x2\ y1\ z3\ \((\[Sigma] + 
+                      d\ \((p - \[CapitalGamma]\ \[Sigma])\))\)\ \
+\[Chi]\)\)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+  FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Clear[\[Sigma], \[CapitalGamma], p, d, r, \[Chi], f, t, u, a, x1, x2, 
+      y1, y2, y3, y4, z1, z2, z3, \[Omega]]\), "\[IndentingNewLine]", 
+    \(\(-\(\(p\ \((\(-t\^2\)\ z1\ z2 + \(x1\ z3\ \((\[Sigma] + d\ \((p - \
+\[CapitalGamma]\ \[Sigma])\))\)\^2\)\/p\^2)\)\ \((y2\ \[Sigma] + \((y3 - 
+                        f\ y4)\)\ \[Chi])\)\)\/\(a\^2\ x2\ y1\ z3\ \
+\((\[Sigma] + 
+                  d\ \((p - \[CapitalGamma]\ \[Sigma])\))\)\ \[Chi]\)\)\) /. \
+\[Sigma] \[Rule] \[ImaginaryI]*\[Omega]\)}], "Input",
+  FontSize->18],
+
+Cell[BoxData[
+    \(\(-\(\(p\ \((\((y3 - 
+                      f\ y4)\)\ \[Chi] + \[ImaginaryI]\ y2\ \[Omega])\)\ \
+\((\(-t\^2\)\ z1\ z2 + \(x1\ z3\ \((\[ImaginaryI]\ \[Omega] + d\ \((p - \
+\[ImaginaryI]\ \[CapitalGamma]\ \[Omega])\))\)\^2\)\/p\^2)\)\)\/\(a\^2\ x2\ \
+y1\ z3\ \[Chi]\ \((\[ImaginaryI]\ \[Omega] + 
+                d\ \((p - \[ImaginaryI]\ \[CapitalGamma]\ \
+\[Omega])\))\)\)\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Clear[\[Sigma], \[CapitalGamma], p, d, r, \[Chi], f, t, u, a, x1, x2, 
+      y1, y2, y3, y4, z1, z2, z3, \[Omega]]\), "\[IndentingNewLine]", 
+    \(\(\[Sigma]\  = \ 0;\)\), "\[IndentingNewLine]", 
+    \(r\  = \(-\(\(p\ \((\(-t\^2\)\ z1\ z2 + \(x1\ z3\ \((\[Sigma] + d\ \((p \
+- \[CapitalGamma]\ \[Sigma])\))\)\^2\)\/p\^2)\)\ \((y2\ \[Sigma] + \((y3 - 
+                        f\ y4)\)\ \[Chi])\)\)\/\(a\^2\ x2\ y1\ z3\ \
+\((\[Sigma] + 
+                  d\ \((p - \[CapitalGamma]\ \[Sigma])\))\)\ \
+\[Chi]\)\)\)\)}], "Input",
+  FontSize->18],
+
+Cell[BoxData[
+    \(\(-\(\(\((y3 - f\ y4)\)\ \((\(-t\^2\)\ z1\ z2 + 
+                d\^2\ x1\ z3)\)\)\/\(a\^2\ d\ x2\ y1\ z3\)\)\)\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Clear[\[Sigma], \[CapitalGamma], p, d, r, \[Chi], f, t, u, a, x1, x2, 
+      y1, y2, y3, y4, z1, z2, z3, \[Omega]]\), "\[IndentingNewLine]", 
+    \(\(r = \(-\(\(p\ \((\((y3 - 
+                          f\ y4)\)\ \[Chi] + \[ImaginaryI]\ y2\ \[Omega])\)\ \
+\((\(-t\^2\)\ z1\ z2 + \(x1\ z3\ \((\[ImaginaryI]\ \[Omega] + d\ \((p - \
+\[ImaginaryI]\ \[CapitalGamma]\ \[Omega])\))\)\^2\)\/p\^2)\)\)\/\(a\^2\ x2\ \
+y1\ z3\ \[Chi]\ \((\[ImaginaryI]\ \[Omega] + 
+                    d\ \((p - \[ImaginaryI]\ \[CapitalGamma]\ \
+\[Omega])\))\)\)\)\);\)\), "\[IndentingNewLine]", 
+    \(FullSimplify[ComplexExpand[Re[r]]]\), "\[IndentingNewLine]", 
+    \(FullSimplify[ComplexExpand[Im[r]]]\)}], "Input",
+  FontSize->18],
+
+Cell[BoxData[
+    \(\(-\(\(d\ p\^3\ \((y3 - f\ y4)\)\ \((\(-t\^2\)\ z1\ z2 + 
+                  d\^2\ x1\ z3)\)\ \[Chi] + 
+            p\ \((\(-1\) + 
+                  d\ \[CapitalGamma])\)\ \((p\ y2\ \((t\^2\ z1\ z2 + 
+                        d\^2\ x1\ z3)\) + 
+                  d\ x1\ \((y3 - f\ y4)\)\ z3\ \((\(-1\) + 
+                        d\ \[CapitalGamma])\)\ \[Chi])\)\ \[Omega]\^2 + 
+            x1\ y2\ z3\ \((\(-1\) + d\ \[CapitalGamma])\)\^3\ \[Omega]\^4\)\/\
+\(a\^2\ p\ x2\ y1\ z3\ \[Chi]\ \((d\^2\ p\^2 + \((\(-1\) + d\ \
+\[CapitalGamma])\)\^2\ \[Omega]\^2)\)\)\)\)\)], "Output"],
+
+Cell[BoxData[
+    \(\(\(-p\^2\)\ \((d\ p\ y2\ \((\(-t\^2\)\ z1\ z2 + d\^2\ x1\ z3)\) - \
+\((y3 - f\ y4)\)\ \((t\^2\ z1\ z2 + d\^2\ x1\ z3)\)\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\ \[Chi])\)\ \[Omega] + x1\ z3\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\^2\ \((\(-d\)\ p\ y2 + \((y3 - f\ y4)\)\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\ \[Chi])\)\ \[Omega]\^3\)\/\(a\^2\ p\ x2\ y1\ z3\ \[Chi]\ \
+\((d\^2\ p\^2 + \((\(-1\) + d\ \[CapitalGamma])\)\^2\ \[Omega]\^2)\)\)\)], \
+"Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    StyleBox[\(Clear[\[Sigma], \[CapitalGamma], p, d, r, \[Chi], f, a, x1, 
+        x2, y1, y2, y3, y4, w]\),
+      FontSize->18], "\[IndentingNewLine]", 
+    StyleBox[\(FullSimplify[
+        Solve[\(-p\^2\)\ \((d\ p\ y2\ \((\(-t\^2\)\ z1\ z2 + 
+                          d\^2\ x1\ z3)\) - \((y3 - 
+                          f\ y4)\)\ \((t\^2\ z1\ z2 + 
+                          d\^2\ x1\ z3)\)\ \((\(-1\) + 
+                          d\ \[CapitalGamma])\)\ \[Chi])\) + 
+              x1\ z3\ \((\(-1\) + d\ \[CapitalGamma])\)\^2\ \((\(-d\)\ p\ y2 \
++ \((y3 - f\ y4)\)\ \((\(-1\) + d\ \[CapitalGamma])\)\ \[Chi])\)\ w \[Equal] 
+            0, w]]\),
+      FontSize->18]}], "Input"],
+
+Cell[BoxData[
+    \({{w \[Rule] \(p\^2\ \((d\ p\ y2\ \((t\^2\ z1\ z2 - d\^2\ x1\ z3)\) + \
+\((y3 - f\ y4)\)\ \((t\^2\ z1\ z2 + d\^2\ x1\ z3)\)\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\ \[Chi])\)\)\/\(x1\ z3\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\^2\ \((d\ p\ y2 - \((y3 - f\ y4)\)\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\ \[Chi])\)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    StyleBox[\(Clear[\[Sigma], \[CapitalGamma], p, \[CapitalLambda], 
+        r1, \[Chi], f, a, x1, x2, y1, y2, y3, y4, z1, z2, z3, w]\),
+      FontSize->18], "\[IndentingNewLine]", 
+    StyleBox[\(w = \(p\^2\ \((d\ p\ y2\ \((t\^2\ z1\ z2 - d\^2\ x1\ z3)\) + \
+\((y3 - f\ y4)\)\ \((t\^2\ z1\ z2 + d\^2\ x1\ z3)\)\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\ \[Chi])\)\)\/\(x1\ z3\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\^2\ \((d\ p\ y2 - \((y3 - f\ y4)\)\ \((\(-1\) + d\ \
+\[CapitalGamma])\)\ \[Chi])\)\);\),
+      FontSize->18], "\[IndentingNewLine]", 
+    RowBox[{
+      RowBox[{
+        StyleBox["r1",
+          FontSize->18], 
+        StyleBox["=",
+          
+          FontSize->
+            18], \(-\(\(d\ p\^3\ \((y3 - f\ y4)\)\ \((\(-t\^2\)\ z1\ z2 + 
+                      d\^2\ x1\ z3)\)\ \[Chi] + 
+                p\ \((\(-1\) + 
+                      d\ \[CapitalGamma])\)\ \((p\ y2\ \((t\^2\ z1\ z2 + 
+                            d\^2\ x1\ z3)\) + 
+                      d\ x1\ \((y3 - f\ y4)\)\ z3\ \((\(-1\) + 
+                            d\ \[CapitalGamma])\)\ \[Chi])\)\ w + 
+                x1\ y2\ z3\ \((\(-1\) + d\ \[CapitalGamma])\)\^3\ w\^2\)\/\(a\
+\^2\ p\ x2\ y1\ z3\ \[Chi]\ \((d\^2\ p\^2 + \((\(-1\) + d\ \[CapitalGamma])\)\
+\^2\ w)\)\)\)\)}], ";"}], "\[IndentingNewLine]", 
+    StyleBox[\(FullSimplify[r1]\),
+      FontSize->18]}], "Input"],
+
+Cell[BoxData[
+    \(\(2\ d\ \((p\^2\ y2\^2\ \((\(-t\^2\)\ z1\ z2 + d\^2\ x1\ z3)\) - 2\ d\ \
+p\ x1\ y2\ \((y3 - f\ y4)\)\ z3\ \((\(-1\) + d\ \[CapitalGamma])\)\ \[Chi] + \
+x1\ \((y3 - f\ y4)\)\^2\ z3\ \((\(-1\) + d\ \[CapitalGamma])\)\^2\ \[Chi]\^2)\
+\)\)\/\(a\^2\ x2\ y1\ z3\ \((\(-1\) + d\ \[CapitalGamma])\)\ \[Chi]\ \((d\ p\ \
+y2 - \((y3 - f\ y4)\)\ \((\(-1\) + d\ \[CapitalGamma])\)\ \[Chi])\)\)\)], \
+"Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1366}, {0, 671}},
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 52, 1, 50, "Input"],
+Cell[1809, 54, 197, 4, 119, "Input"],
+
+Cell[CellGroupData[{
+Cell[2031, 62, 803, 17, 210, "Input"],
+Cell[2837, 81, 329, 5, 58, "Output"]
+}, Open  ]],
+Cell[3181, 89, 42, 1, 35, "Input"],
+
+Cell[CellGroupData[{
+Cell[3248, 94, 544, 9, 105, "Input"],
+Cell[3795, 105, 409, 7, 58, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4241, 117, 562, 10, 131, "Input"],
+Cell[4806, 129, 145, 2, 47, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4988, 136, 727, 12, 162, "Input"],
+Cell[5718, 150, 597, 10, 47, "Output"],
+Cell[6318, 162, 468, 7, 47, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6823, 174, 697, 13, 98, "Input"],
+Cell[7523, 189, 340, 5, 47, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7900, 199, 1372, 28, 153, "Input"],
+Cell[9275, 229, 416, 6, 47, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

@@ -1,0 +1,161 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      3525,        110]*)
+(*NotebookOutlinePosition[      4169,        132]*)
+(*  CellTagsIndexPosition[      4125,        128]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+    \(Clear[c1, f, th]\), "\[IndentingNewLine]", 
+    \(f = 0.878455; th = 1;\), "\[IndentingNewLine]", 
+    \(FindRoot[
+      Exp[\@c1]*\((\(1 - \@\(1 - \(2*f\)\/c1\)\)\/\(1 + \@\(1 - \(2*f\)\/c1\)\
+\))\) == \(1 - \@\(1 - \(2*f*Exp[th]\)\/c1\)\)\/\(1 + \@\(1 - \(2*f*Exp[th]\)\
+\/c1\)\), {c1, 3}]\)}], "Input",
+  FontSize->24],
+
+Cell[BoxData[
+    RowBox[{\(FindRoot::"cvmit"\), \(\(:\)\(\ \)\), "\<\"Failed to converge \
+to the requested accuracy or precision within \\!\\(100\\) iterations. \\!\\(\
+\\*ButtonBox[\\\"More\[Ellipsis]\\\", ButtonStyle->\\\"RefGuideLinkText\\\", \
+ButtonFrame->None, ButtonData:>\\\"FindRoot::cvmit\\\"]\\)\"\>"}]], "Message"],
+
+Cell[BoxData[
+    \({c1 \[Rule] \(\(4.775710534045716`\)\(\[InvisibleSpace]\)\) + 
+          4.2074398343029513`*^-10\ \[ImaginaryI]}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\[IndentingNewLine]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Clear[c1, c2, f]\), "\[IndentingNewLine]", 
+    \(f = 0.878455; c1 = 4.77571;\), "\[IndentingNewLine]", 
+    \(FindRoot[
+      c2 \[Equal] 
+        Exp[\@c1]*\((\(1 - \@\(1 - \(2*f\)\/c1\)\)\/\(1 + \@\(1 - \(2*f\)\/c1\
+\)\))\), {c2, 1}]\)}], "Input",
+  FontSize->24],
+
+Cell[BoxData[
+    \({c2 \[Rule] 1.0153976484455467`}\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\[IndentingNewLine]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Clear[c1, c2, f, z, tb]\), "\[IndentingNewLine]", 
+    \(f = 0.878455; c1 = 4.77571; c2 = 1.0154; 
+    z = 1;\), "\[IndentingNewLine]", 
+    \(tb = 
+      Log[c1\/\(2*f\)] + 
+        Log[1 - \((\(1 - c2*Exp[\(-\@c1\)*z]\)\/\(1 + \
+c2*Exp[\(-\@c1\)*z]\))\)\^2]\)}], "Input",
+  FontSize->24],
+
+Cell[BoxData[
+    \(1.8412657071253946`*^-6\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1366}, {0, 671}},
+WindowSize->{1060, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 342, 7, 236, "Input"],
+Cell[2121, 62, 328, 4, 22, "Message"],
+Cell[2452, 68, 147, 2, 29, "Output"]
+}, Open  ]],
+Cell[2614, 73, 52, 1, 50, "Input"],
+
+Cell[CellGroupData[{
+Cell[2691, 78, 287, 7, 189, "Input"],
+Cell[2981, 87, 66, 1, 29, "Output"]
+}, Open  ]],
+Cell[3062, 91, 52, 1, 50, "Input"],
+
+Cell[CellGroupData[{
+Cell[3139, 96, 310, 8, 179, "Input"],
+Cell[3452, 106, 57, 1, 29, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
